@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxt/typescript": "^2.6.1",
     "@nuxtjs/axios": "^5.4.1",
+    "@nuxtjs/style-resources": "^0.1.2",
     "cross-env": "^5.2.0",
     "nuxt": "^2.6.1",
     "ts-node": "^8.0.3",
@@ -41,9 +42,11 @@
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.10",
     "prettier": "1.16.4",
+    "prettier-stylelint": "^0.4.2",
     "pug": "2.0.3",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
+    "stylelint-config-standard": "^18.2.0",
     "typesync": "^0.5.1"
   }
 }
