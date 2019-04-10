@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard"],
+  "extends": ["stylelint-config-standard", "stylelint-config-property-sort-order-smacss"],
   "rules": {
     "indentation": 4,
     "declaration-colon-newline-after": null,
