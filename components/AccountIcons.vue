@@ -52,16 +52,16 @@ export default class Index extends Vue {
   }
 
   mounted() {
-    const setIconSizeFromMediaQuery = (mql: MediaQueryList) =>
-      this.setIconSize(mql.matches ? '2x' : 'lg')
+    const setIconSizeFromMediaQuery = (ev: MediaQueryListEvent) =>
+      this.setIconSize(ev.matches ? '2x' : 'lg')
     const initialMediaQueryList = MediaQuery.addListener(
       QUERY.md,
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       function(ev: MediaQueryListEvent) {
-        setIconSizeFromMediaQuery(this)
+        setIconSizeFromMediaQuery(ev)
       }
     )
-    setIconSizeFromMediaQuery(initialMediaQueryList)
+    this.setIconSize(initialMediaQueryList.matches ? '2x' : 'lg')
   }
 }
 

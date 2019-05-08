@@ -10,7 +10,7 @@ export default {
     listener?: (this: MediaQueryList, ev: MediaQueryListEvent) => any
   ): MediaQueryList {
     const mediaQueryList = window.matchMedia(query)
-    if (listener) mediaQueryList.addEventListener('change', listener)
+    if (listener) mediaQueryList.addListener(listener)
     return mediaQueryList
   }
 }
