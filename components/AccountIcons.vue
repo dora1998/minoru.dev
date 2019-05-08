@@ -6,7 +6,7 @@
       :href="account.link"
       :style="getIconStyle(account.color)"
     >
-      <IconButton :icon="account.icon" size="2x" />
+      <IconButton :icon="account.icon" :size="iconSize" />
     </a>
   </div>
 </template>
@@ -16,12 +16,16 @@ import { Component, Vue } from 'vue-property-decorator'
 
 import IconButton from '~/basics/IconButton.vue'
 
+import MediaQuery, { QUERY } from '~/utils/MediaQuery'
+
 @Component({
   components: {
     IconButton
   }
 })
 export default class Index extends Vue {
+  iconSize: string = 'lg'
+
   accounts: Account[] = [
     {
       name: 'Twitter',
@@ -42,6 +46,23 @@ export default class Index extends Vue {
       '--brand-color': color
     }
   }
+
+  setIconSize(size: string) {
+    this.iconSize = size
+  }
+
+  mounted() {
+    const setIconSizeFromMediaQuery = (mql: MediaQueryList) =>
+      this.setIconSize(mql.matches ? '2x' : 'lg')
+    const initialMediaQueryList = MediaQuery.addListener(
+      QUERY.md,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      function(ev: MediaQueryListEvent) {
+        setIconSizeFromMediaQuery(this)
+      }
+    )
+    setIconSizeFromMediaQuery(initialMediaQueryList)
+  }
 }
 
 interface Account {
@@ -56,12 +77,19 @@ interface Account {
 .account_container {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  width: 180px;
+
+  @include mq(md) {
+    margin: 0 auto;
+    width: 180px;
+  }
 
   a {
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
+    @include mq(md) {
+      width: 64px;
+      height: 64px;
+    }
 
     display: flex;
     justify-content: center;

@@ -11,8 +11,12 @@ export default class Index extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.myname span {
+.myname {
+  flex-grow: 1;
+}
+.myname > span {
   margin-right: 8px;
+  font-size: 1.5em;
 
   @include mq(md) {
     display: block;

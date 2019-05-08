@@ -39,15 +39,29 @@ interface MenuItem {
 
 <style lang="scss" scoped>
 ul {
-  width: 60%;
-  margin: 0 auto;
-  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
   list-style-type: none;
+  padding: 0;
+
+  @include mq(md) {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+  }
+
   li {
     a {
       display: block;
       padding: 8px;
-      margin: 16px;
+      width: 100px;
+      height: 100%;
+      @include mq(md) {
+        margin: 16px;
+        width: auto;
+        height: auto;
+      }
 
       text-align: center;
       color: #fff;

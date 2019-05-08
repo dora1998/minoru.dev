@@ -18,26 +18,22 @@ export default class Index extends Vue {}
 
 <style lang="scss">
 .layout_container {
-  display: grid;
-  grid-template-rows: 48px 1fr;
-  grid-template-columns: 320px 1fr;
   width: 100%;
-  height: 100vh;
 
   .page_container {
-    overflow: auto;
-    grid-row-start: 2;
-    grid-row-end: auto;
+    padding: 16px;
+
+    @include mq(md) {
+      grid-column: 2;
+      overflow-y: auto;
+      padding: 24px;
+    }
   }
 
   @include mq(md) {
-    .page_container {
-      grid-column-start: 2;
-      grid-column-end: auto;
-      grid-row-start: 1;
-      grid-row-end: 3;
-      padding: 16px;
-    }
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr / 320px 1fr;
   }
 }
 

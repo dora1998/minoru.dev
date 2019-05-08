@@ -1,6 +1,6 @@
 <template>
   <div class="side_container">
-    <MyName />
+    <MyName class="name" />
     <SiteMenu class="menu" />
     <AccountIcons class="accounts" />
   </div>
@@ -24,21 +24,39 @@ export default class Index extends Vue {}
 
 <style lang="scss" scoped>
 .side_container {
+  display: grid;
+  grid-template:
+    'name account' 1fr
+    'menu menu' auto
+    / 1fr 80px;
+
   background-color: $primary;
   color: #fff;
-  padding: 16px;
+  padding: 16px 16px 4px;
 
-  @include mq(md) {
-    padding: 32px;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: auto;
+  position: sticky;
+  top: 0;
+
+  > .name {
+    grid-area: name;
+  }
+  > .account {
+    grid-area: account;
+  }
+  > .menu {
+    grid-area: menu;
   }
 
-  .menu,
-  .accounts {
-    margin-top: 24px;
+  @include mq(md) {
+    display: block;
+    padding: 32px;
+    grid-row: 1 / 3;
+    grid-column: 1;
+
+    .menu,
+    .accounts {
+      margin-top: 24px;
+    }
   }
 }
 </style>
