@@ -13,6 +13,11 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-regular-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
     "@nuxt/typescript": "^2.6.1",
     "@nuxtjs/axios": "^5.4.1",
     "@nuxtjs/style-resources": "^0.1.2",
@@ -20,7 +25,8 @@
     "nuxt": "^2.6.1",
     "ts-node": "^8.0.3",
     "typescript": "^3.4.2",
-    "vue-property-decorator": "^8.1.0"
+    "vue-property-decorator": "^8.1.0",
+    "yarn": "^1.15.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",

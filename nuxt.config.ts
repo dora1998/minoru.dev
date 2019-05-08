@@ -28,9 +28,9 @@ const nuxtConfig: NuxtConfiguration = {
   css: [],
 
   /*
-   ** Plugins to load before mounting the App
+   ** Plugins to load before   mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/fontawesome.ts'],
 
   /*
    ** Nuxt.js modules
