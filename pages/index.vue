@@ -1,8 +1,9 @@
-<template lang="pug">
-  section.container
-    div
-      h1.title
-        | minoru.dev
+<template>
+  <section class="container">
+    <div>
+      <h1 class="title">minoru.dev</h1>
+    </div>
+  </section>
 </template>
 
 <script lang="ts">

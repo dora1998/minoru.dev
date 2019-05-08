@@ -1,16 +1,16 @@
 <template lang="pug">
   div.layout_container
-    NameContainer.name
+    SideContainer.name
     nuxt.page_container
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import NameContainer from '~/containers/NameContainer.vue'
+import SideContainer from '~/containers/SideContainer.vue'
 
 @Component({
   components: {
-    NameContainer
+    SideContainer
   }
 })
 export default class Index extends Vue {}
@@ -18,21 +18,38 @@ export default class Index extends Vue {}
 
 <style lang="scss">
 .layout_container {
+  display: grid;
+  grid-template-rows: 48px 1fr;
+  grid-template-columns: 320px 1fr;
+  width: 100%;
+  height: 100vh;
+
+  .page_container {
+    overflow: auto;
+    grid-row-start: 2;
+    grid-row-end: auto;
+  }
+
   @include mq(md) {
     .page_container {
-      margin-left: 320px;
+      grid-column-start: 2;
+      grid-column-end: auto;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      padding: 16px;
     }
   }
 }
 
 html {
+  box-sizing: border-box;
   font-size: 16px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
 }
