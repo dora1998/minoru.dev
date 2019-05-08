@@ -8,7 +8,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
     project: './tsconfig.json',
-    ecmaFeatures: { "legacyDecorators": true }
+    ecmaFeatures: { legacyDecorators: true }
   },
   extends: [
     '@nuxtjs',
@@ -17,20 +17,18 @@ module.exports = {
     'prettier/vue',
     'prettier/@typescript-eslint'
   ],
-  plugins: [
-    'prettier',
-    '@typescript-eslint'
-  ],
+  plugins: ['prettier', '@typescript-eslint'],
   // add your custom rules here
   rules: {
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "error",
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
+    'no-console': 'warn',
     // cf) http://fpg.hateblo.jp/entry/2019/04/14/155041
-    "no-restricted-globals": [
-      "error",
+    'no-restricted-globals': [
+      'error',
       {
-        "name": "Map",
-        "message": "Use standard object."
+        name: 'Map',
+        message: 'Use standard object.'
       }
     ]
   }
