@@ -108,7 +108,7 @@ const nuxtConfig: NuxtConfiguration = {
   },
 
   styleResources: {
-    scss: ['~/assets/sass/variable.scss']
+    scss: ['~/assets/sass/variable.scss', '~/assets/sass/mixin.scss']
   },
 
   env: {

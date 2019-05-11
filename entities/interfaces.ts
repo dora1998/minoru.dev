@@ -39,7 +39,7 @@ export interface IWork {
   createdAt: string
   website: string
   github: string
-  description: string
+  body: string
   images: string[]
   order: number
 }

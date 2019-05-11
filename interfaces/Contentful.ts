@@ -19,7 +19,6 @@ class Contentful {
       content_type: process.env.CTF_WORK_TYPE_ID,
       order: '-fields.createdAt'
     })
-    console.log(res)
     return res.items.map((item: any) => item.fields as IWork)
   }
 }

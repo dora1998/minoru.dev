@@ -2,20 +2,22 @@
   <section class="container">
     <div>
       <h1 class="title">これまでの制作物</h1>
+      <WorkList />
     </div>
   </section>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { storeWorks } from '~/store/works'
 
-@Component({})
-export default class Works extends Vue {
-  public mounted() {
-    storeWorks.fetch()
+import WorkList from '~/components/WorkList.vue'
+
+@Component({
+  components: {
+    WorkList
   }
-}
+})
+export default class Works extends Vue {}
 </script>
 
 <style lang="scss" scoped>

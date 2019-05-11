@@ -56,24 +56,6 @@ export default class Profile extends Vue {
 }
 
 .attribution {
-  display: flex;
-  align-items: center;
-  margin-bottom: 4px;
-
-  > .icon {
-    margin-right: 8px;
-  }
-
-  > .name {
-    min-width: 100px;
-  }
-
-  > .text {
-    flex-grow: 1;
-  }
-
-  > .text > .link {
-    overflow-wrap: break-word;
-  }
+  @include attribution;
 }
 </style>
