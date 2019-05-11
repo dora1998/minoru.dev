@@ -79,29 +79,28 @@ interface Account {
   justify-content: space-between;
 
   @include mq(md) {
-    margin: 0 auto;
     width: 180px;
+    margin: 0 auto;
   }
 
   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 32px;
     height: 32px;
+    transition: all 300ms 0s ease;
+    border-radius: 100%;
+    color: white;
+
     @include mq(md) {
       width: 64px;
       height: 64px;
     }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: white;
-    border-radius: 100%;
-    transition: all 300ms 0s ease;
-
     &:hover {
-      color: var(--brand-color);
       background-color: white;
+      color: var(--brand-color);
     }
   }
 }

@@ -25,15 +25,15 @@ export default class Index extends Vue {}
 
     @include mq(md) {
       grid-column: 2;
-      overflow-y: auto;
       padding: 24px;
+      overflow-y: auto;
     }
   }
 
   @include mq(md) {
-    height: 100vh;
     display: grid;
     grid-template: 1fr / 320px 1fr;
+    height: 100vh;
   }
 }
 
@@ -51,8 +51,8 @@ body {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
 }

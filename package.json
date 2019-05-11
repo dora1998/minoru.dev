@@ -52,8 +52,11 @@
     "pug": "2.0.3",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
+    "stylelint": "^10.0.1",
     "stylelint-config-property-sort-order-smacss": "^4.0.2",
     "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.6.1",
+    "stylelint-webpack-plugin": "^0.10.5",
     "typesync": "^0.5.1"
   },
   "browserslist": [

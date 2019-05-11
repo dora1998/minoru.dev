@@ -1,5 +1,6 @@
 import NuxtConfiguration from '@nuxt/config'
-const pkg = require('./package')
+const StylelintPlugin = require('stylelint-webpack-plugin')
+// const pkg = require('./package')
 
 const nuxtConfig: NuxtConfiguration = {
   mode: 'spa',
@@ -86,6 +87,13 @@ const nuxtConfig: NuxtConfiguration = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+
+        if (!config.plugins) return
+        config.plugins.push(
+          new StylelintPlugin({
+            files: ['**/*.vue', '**/*.scss']
+          })
+        )
       }
     },
 

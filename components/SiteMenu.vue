@@ -42,8 +42,8 @@ ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 
   @include mq(md) {
     display: block;
@@ -54,20 +54,19 @@ ul {
   li {
     a {
       display: block;
-      padding: 8px;
       width: 100px;
       height: 100%;
-      @include mq(md) {
-        margin: 16px;
-        width: auto;
-        height: auto;
-      }
-
-      text-align: center;
+      padding: 8px;
+      border-radius: 8px;
       color: #fff;
+      text-align: center;
       text-decoration: none;
 
-      border-radius: 8px;
+      @include mq(md) {
+        width: auto;
+        height: auto;
+        margin: 16px;
+      }
 
       &:hover {
         background-color: #fff;

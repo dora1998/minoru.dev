@@ -25,33 +25,33 @@ export default class Index extends Vue {}
 <style lang="scss" scoped>
 .side_container {
   display: grid;
+  position: sticky;
+  top: 0;
   grid-template:
     'name account' 1fr
     'menu menu' auto
     / 1fr 80px;
-
+  padding: 16px 16px 4px;
   background-color: $primary;
   color: #fff;
-  padding: 16px 16px 4px;
-
-  position: sticky;
-  top: 0;
 
   > .name {
     grid-area: name;
   }
+
   > .account {
     grid-area: account;
   }
+
   > .menu {
     grid-area: menu;
   }
 
   @include mq(md) {
     display: block;
-    padding: 32px;
-    grid-row: 1 / 3;
     grid-column: 1;
+    grid-row: 1 / 3;
+    padding: 32px;
 
     .menu,
     .accounts {

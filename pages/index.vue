@@ -29,7 +29,7 @@ export default class Index extends Vue {}
 
 <style lang="scss" scoped>
 h1 {
-  border-bottom: 1px solid #ccc;
   margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
 }
 </style>

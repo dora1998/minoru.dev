@@ -14,15 +14,16 @@ export default class Index extends Vue {}
 .myname {
   flex-grow: 1;
 }
+
 .myname > span {
   margin-right: 8px;
   font-size: 1.5em;
 
   @include mq(md) {
     display: block;
-    text-align: left;
     margin: 0;
     font-size: 3em;
+    text-align: left;
   }
 }
 </style>
