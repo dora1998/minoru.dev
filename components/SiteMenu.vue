@@ -1,7 +1,11 @@
 <template>
   <ul>
-    <li v-for="item in items" :key="item.name">
-      <a :href="item.link" v-text="item.name"></a>
+    <li
+      v-for="item in items"
+      :key="item.name"
+      :class="{ active: item.name == currentItem }"
+    >
+      <nuxt-link :to="{ name: item.name }" v-text="item.text" />
     </li>
   </ul>
 </template>
@@ -10,30 +14,26 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component({})
-export default class Index extends Vue {
+export default class SiteMenu extends Vue {
   items: MenuItem[] = [
     {
-      name: 'Top',
-      link: '/',
-      icon: ''
+      text: 'Top',
+      name: 'index'
     },
     {
-      name: 'Works',
-      link: '/works/',
-      icon: ''
-    },
-    {
-      name: 'Contact',
-      link: '/contact/',
-      icon: ''
+      text: 'Works',
+      name: 'works'
     }
   ]
+
+  get currentItem(): string | undefined {
+    return this.$route.name
+  }
 }
 
 interface MenuItem {
+  text: string
   name: string
-  link: string
-  icon: string
 }
 </script>
 
@@ -52,7 +52,7 @@ ul {
   }
 
   li {
-    a {
+    > a {
       display: block;
       width: 100px;
       height: 100%;
@@ -69,8 +69,16 @@ ul {
       }
 
       &:hover {
-        background-color: #fff;
-        color: $primary;
+        border: 1px solid #fff;
+      }
+    }
+
+    &.active > a {
+      background-color: #fff;
+      color: $primary;
+
+      &:hover {
+        border: none;
       }
     }
   }
