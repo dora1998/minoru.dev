@@ -12,10 +12,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { IMenuItem } from '~/entities/interfaces'
 
 @Component({})
 export default class SiteMenu extends Vue {
-  items: MenuItem[] = [
+  items: IMenuItem[] = [
     {
       text: 'Top',
       name: 'index'
@@ -29,11 +30,6 @@ export default class SiteMenu extends Vue {
   get currentItem(): string | undefined {
     return this.$route.name
   }
-}
-
-interface MenuItem {
-  text: string
-  name: string
 }
 </script>
 

@@ -21,10 +21,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { IAttribution } from '~/entities/interfaces'
 
 @Component({})
 export default class Profile extends Vue {
-  attrs: Attribution[] = [
+  attrs: IAttribution[] = [
     {
       name: 'University',
       icon: 'school',
@@ -46,13 +47,6 @@ export default class Profile extends Vue {
       link: 'https://www.wantedly.com/users/36717718'
     }
   ]
-}
-
-interface Attribution {
-  name: string
-  icon?: string | string[]
-  text?: string
-  link?: string
 }
 </script>
 

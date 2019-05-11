@@ -1,3 +1,10 @@
+export interface IAccount {
+  name: string
+  link: string
+  icon: string | string[]
+  color: string
+}
+
 export interface IAttribution {
   name: string
   icon?: string | string[]

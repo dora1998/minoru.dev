@@ -16,8 +16,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
+import { IAccount } from '~/entities/interfaces'
 import IconButton from '~/basics/IconButton.vue'
-
 import MediaQuery, { QUERY } from '~/utils/MediaQuery'
 
 @Component({
@@ -28,7 +28,7 @@ import MediaQuery, { QUERY } from '~/utils/MediaQuery'
 export default class AccountIcons extends Vue {
   iconSize: string = 'lg'
 
-  accounts: Account[] = [
+  accounts: IAccount[] = [
     {
       name: 'Twitter',
       link: 'https://twitter.com/_dorayaki_',
@@ -65,13 +65,6 @@ export default class AccountIcons extends Vue {
     )
     this.setIconSize(initialMediaQueryList.matches ? '2x' : 'lg')
   }
-}
-
-interface Account {
-  name: string
-  link: string
-  icon: string | string[]
-  color: string
 }
 </script>
 
