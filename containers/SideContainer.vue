@@ -19,7 +19,7 @@ import AccountIcons from '~/components/AccountIcons.vue'
     AccountIcons
   }
 })
-export default class Index extends Vue {}
+export default class SideContainer extends Vue {}
 </script>
 
 <style lang="scss" scoped>

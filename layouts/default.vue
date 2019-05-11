@@ -13,7 +13,7 @@ import SideContainer from '~/containers/SideContainer.vue'
     SideContainer
   }
 })
-export default class Index extends Vue {}
+export default class LayoutDefault extends Vue {}
 </script>
 
 <style lang="scss">

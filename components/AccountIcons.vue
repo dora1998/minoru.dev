@@ -23,7 +23,7 @@ import MediaQuery, { QUERY } from '~/utils/MediaQuery'
     IconButton
   }
 })
-export default class Index extends Vue {
+export default class AccountIcons extends Vue {
   iconSize: string = 'lg'
 
   accounts: Account[] = [

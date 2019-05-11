@@ -7,7 +7,7 @@
 <script lang="ts">
 import { Vue } from 'vue-property-decorator'
 
-export default class Index extends Vue {}
+export default class MyName extends Vue {}
 </script>
 
 <style lang="scss" scoped>
