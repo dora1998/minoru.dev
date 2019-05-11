@@ -8,9 +8,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { storeWorks } from '~/store/works'
 
 @Component({})
-export default class Works extends Vue {}
+export default class Works extends Vue {
+  public mounted() {
+    storeWorks.fetch()
+  }
+}
 </script>
 
 <style lang="scss" scoped>
