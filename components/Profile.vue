@@ -6,7 +6,13 @@
       </div>
       <div v-else class="name" v-text="attr.name" />
       <div v-if="attr.link" class="text">
-        <a :href="attr.link" class="link" v-text="attr.text" />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          :href="attr.link"
+          class="link"
+          v-text="attr.text"
+        />
       </div>
       <div v-else class="text" v-text="attr.text" />
     </div>

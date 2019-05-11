@@ -3,6 +3,8 @@
     <a
       v-for="account in accounts"
       :key="account.name"
+      target="_blank"
+      rel="noopener noreferrer"
       :href="account.link"
       :style="getIconStyle(account.color)"
     >
