@@ -1,5 +1,6 @@
 import NuxtConfiguration from '@nuxt/config'
 const StylelintPlugin = require('stylelint-webpack-plugin')
+require('dotenv').config()
 // const pkg = require('./package')
 
 const nuxtConfig: NuxtConfiguration = {
@@ -108,6 +109,10 @@ const nuxtConfig: NuxtConfiguration = {
 
   styleResources: {
     scss: ['~/assets/sass/variable.scss']
+  },
+
+  env: {
+    feedUrl: process.env.FEED_URL!
   }
 }
 
