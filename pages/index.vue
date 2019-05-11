@@ -1,8 +1,12 @@
 <template>
   <section class="container">
     <div>
-      <h1 class="title">プロフィール</h1>
+      <h1>プロフィール</h1>
       <Profile />
+      <h1>スキル</h1>
+      <SkillSet />
+      <h1>最近の投稿</h1>
+      <RecentPosts />
     </div>
   </section>
 </template>
@@ -10,6 +14,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import Profile from '~/components/Profile.vue'
+import SkillSet from '~/components/SkillSet.vue'
+import RecentPosts from '~/components/RecentPosts.vue'
 // import { MetaInfo } from 'vue-meta'
 
 @Component({
@@ -21,7 +27,9 @@ import Profile from '~/components/Profile.vue'
   // },
 
   components: {
-    Profile
+    Profile,
+    SkillSet,
+    RecentPosts
   }
 })
 export default class Index extends Vue {}
