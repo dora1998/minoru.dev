@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div v-text="work.body" />
+      <div v-html="$md.render(work.body)" />
     </div>
   </div>
 </template>

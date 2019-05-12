@@ -62,7 +62,8 @@ const nuxtConfig: NuxtConfiguration = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/markdownit'
   ],
   /*
    ** Axios module configuration
@@ -116,6 +117,15 @@ const nuxtConfig: NuxtConfiguration = {
     CTF_WORK_TYPE_ID: process.env.CTF_WORK_TYPE_ID!,
     CTF_SPACE_ID: process.env.CTF_SPACE_ID!,
     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN!
+  },
+
+  markdownit: {
+    injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
+    breaks: true, // 改行コードを<br>に変換する
+    html: true, // HTML タグを有効にする
+    linkify: true, // URLに似たテキストをリンクに自動変換する
+    typography: true, // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
+    use: []
   }
 }
 
