@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div v-for="work in works" :key="work.name">
+    <div v-for="work in works" :key="work.name" class="work">
       <h2 v-text="work.name" />
 
-      <div>
+      <div class="attributions">
         <div v-if="work.website" class="attribution">
           <div class="icon">
             <font-awesome-icon icon="globe-asia" fixed-width />
@@ -54,7 +54,15 @@ export default class WorkList extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.attribution {
-  @include attribution;
+.work {
+  margin-bottom: 16px;
+}
+
+.attributions {
+  margin-bottom: 8px;
+
+  > .attribution {
+    @include attribution;
+  }
 }
 </style>
