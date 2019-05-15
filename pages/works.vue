@@ -9,10 +9,17 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { MetaInfo } from 'vue-meta'
 
 import WorkList from '~/components/WorkList.vue'
 
 @Component({
+  head(): MetaInfo {
+    return {
+      title: 'Works'
+    }
+  },
+
   components: {
     WorkList
   }

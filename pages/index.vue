@@ -18,9 +18,16 @@ import { Component, Vue } from 'vue-property-decorator'
 import Profile from '~/components/Profile.vue'
 import SkillSet from '~/components/SkillSet.vue'
 import PostList from '~/components/PostList.vue'
-// import { MetaInfo } from 'vue-meta'
+import { MetaInfo } from 'vue-meta'
 
 @Component({
+  head(): MetaInfo {
+    return {
+      titleTemplate: '',
+      title: "Minoru's Portfolio"
+    }
+  },
+
   components: {
     Profile,
     SkillSet,
