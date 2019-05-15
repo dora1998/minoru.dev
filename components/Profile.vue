@@ -48,6 +48,10 @@ export default class Profile extends Vue {
       name: 'Wantedly',
       text: 'プロフィール',
       link: 'https://www.wantedly.com/users/36717718'
+    },
+    {
+      name: 'Email',
+      text: 'me[at]minoru.dev'
     }
   ]
 }
