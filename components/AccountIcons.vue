@@ -7,6 +7,7 @@
       rel="noopener noreferrer"
       :href="account.link"
       :style="getIconStyle(account.color)"
+      :aria-label="account.name"
     >
       <IconButton :icon="account.icon" :size="iconSize" />
     </a>

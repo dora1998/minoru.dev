@@ -12,7 +12,8 @@ const nuxtConfig: NuxtConfiguration = {
   head: {
     title: "Minoru's Portfolio",
     htmlAttrs: {
-      prefix: 'og: http://ogp.me/ns#'
+      prefix: 'og: http://ogp.me/ns#',
+      lang: 'ja'
     },
     titleTemplate: "%s - Minoru's Portfolio",
     meta: [

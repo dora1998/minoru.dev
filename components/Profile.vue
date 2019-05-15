@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <img class="prof_illust" src="~/assets/imgs/prof_illust.jpeg" />
+    <img
+      class="prof_illust"
+      alt="プロフィールイラスト"
+      src="~/assets/imgs/prof_illust.jpeg"
+    />
     <div class="attrs">
       <div v-for="attr in attrs" :key="attr.name" class="attribution">
         <div v-if="attr.icon" class="icon">

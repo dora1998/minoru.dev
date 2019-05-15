@@ -2,7 +2,7 @@
   <section class="container">
     <div v-for="p in posts" :key="p.id" class="post">
       <div class="ogp-image">
-        <img :src="p.image" />
+        <img :src="p.image" :alt="p.title" />
       </div>
       <div class="post-detail">
         <a :href="p.url" class="link">
