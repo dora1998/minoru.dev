@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="work in works" :key="work.name" class="work">
-      <h2 v-text="work.name" />
+      <h2 v-text="work.name" class="name" />
 
       <div class="attributions">
         <div v-if="work.website" class="attribution">
@@ -58,6 +58,10 @@ export default class WorkList extends Vue {
   @include card-layout;
 
   margin-bottom: 16px;
+
+  > .name {
+    margin-bottom: 8px;
+  }
 }
 
 .attributions {
