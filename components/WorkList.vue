@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="work in works" :key="work.name" class="work">
-      <h2 v-text="work.name" class="name" />
+      <h2 class="name" v-text="work.name" />
 
       <div class="attributions">
         <div v-if="work.website" class="attribution">
