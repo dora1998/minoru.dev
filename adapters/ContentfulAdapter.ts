@@ -17,7 +17,7 @@ class ContentfulAdapter {
     if (!this.client) this.client = this.createClient()
     const res = await this.client.getEntries({
       content_type: process.env.CTF_WORK_TYPE_ID,
-      order: '-fields.createdAt'
+      order: 'fields.order'
     })
     return res.items.map((item: any) => item.fields as IWork)
   }

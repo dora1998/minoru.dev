@@ -31,7 +31,8 @@ export default class SideContainer extends Vue {}
     'name account' 1fr
     'menu menu' auto
     / 1fr 80px;
-  padding: 16px 16px 4px;
+  row-gap: 8px;
+  padding: 16px 16px 8px;
   background-color: $primary;
   color: #fff;
 

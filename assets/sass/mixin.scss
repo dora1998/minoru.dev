@@ -2,19 +2,19 @@
   display: flex;
   align-items: center;
   margin-bottom: 4px;
-  
+
   > .icon {
     margin-right: 8px;
   }
-  
+
   > .name {
     min-width: 100px;
   }
-  
+
   > .text {
     flex-grow: 1;
   }
-  
+
   > .text > .link {
     overflow-wrap: break-word;
   }
@@ -24,5 +24,5 @@
   padding: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
 }

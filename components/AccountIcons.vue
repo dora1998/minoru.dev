@@ -84,7 +84,7 @@ export default class AccountIcons extends Vue {
     justify-content: center;
     width: 32px;
     height: 32px;
-    transition: all 300ms 0s ease;
+    transition: background-color, color 300ms 0s ease;
     border-radius: 100%;
     color: white;
 

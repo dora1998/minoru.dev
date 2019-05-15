@@ -41,6 +41,7 @@ export default class RecentPosts extends Vue {
 
   @include card-layout;
 
+  margin-bottom: 8px;
   column-gap: 16px;
 
   > .ogp-image {

@@ -1,20 +1,23 @@
 <template>
   <div class="container">
-    <div v-for="attr in attrs" :key="attr.name" class="attribution">
-      <div v-if="attr.icon" class="icon">
-        <font-awesome-icon :icon="attr.icon" fixed-width />
+    <img class="prof_illust" src="~/assets/imgs/prof_illust.jpeg" />
+    <div class="attrs">
+      <div v-for="attr in attrs" :key="attr.name" class="attribution">
+        <div v-if="attr.icon" class="icon">
+          <font-awesome-icon :icon="attr.icon" fixed-width />
+        </div>
+        <div v-else class="name" v-text="attr.name" />
+        <div v-if="attr.link" class="text">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            :href="attr.link"
+            class="link"
+            v-text="attr.text"
+          />
+        </div>
+        <div v-else class="text" v-text="attr.text" />
       </div>
-      <div v-else class="name" v-text="attr.name" />
-      <div v-if="attr.link" class="text">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          :href="attr.link"
-          class="link"
-          v-text="attr.text"
-        />
-      </div>
-      <div v-else class="text" v-text="attr.text" />
     </div>
   </div>
 </template>
@@ -52,10 +55,26 @@ export default class Profile extends Vue {
 
 <style lang="scss" scoped>
 .container {
+  display: flex;
+  align-items: flex-start;
   padding: 8px;
-}
 
-.attribution {
-  @include attribution;
+  > .prof_illust {
+    display: none;
+
+    @include mq(md) {
+      display: block;
+      width: 100px;
+      margin-right: 16px;
+    }
+  }
+
+  > .attrs {
+    flex-grow: 1;
+
+    > .attribution {
+      @include attribution;
+    }
+  }
 }
 </style>

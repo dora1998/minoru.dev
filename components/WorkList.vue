@@ -55,14 +55,27 @@ export default class WorkList extends Vue {
 
 <style lang="scss" scoped>
 .work {
+  @include card-layout;
+
   margin-bottom: 16px;
 }
 
 .attributions {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
 
   > .attribution {
     @include attribution;
+
+    > .link {
+      font-size: 0.8em;
+      word-break: break-all;
+
+      @include mq(md) {
+        font-size: 1em;
+      }
+    }
   }
 }
 </style>
