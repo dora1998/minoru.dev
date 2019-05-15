@@ -39,6 +39,9 @@ export default class LayoutDefault extends Vue {}
 
 html {
   box-sizing: border-box;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro',
+    '游ゴシック Medium', 'YuGothic', 'YuGothicM', 'メイリオ', 'Meiryo',
+    sans-serif;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
