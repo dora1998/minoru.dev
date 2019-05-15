@@ -23,8 +23,7 @@ export interface IPost {
   title: string
   summary: string
   image: string
-  // eslint-disable-next-line camelcase
-  date_published: string
+  datePublished: string
 }
 
 export interface ISkillSet {

@@ -39,7 +39,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { IWork } from '~/entities/interfaces'
-import { storeWorks } from '~/store/works'
+import { storeWorks } from '~/store/-works'
 
 @Component({})
 export default class WorkList extends Vue {

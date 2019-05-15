@@ -1,3 +1,4 @@
+import store from '@/store/-store'
 import {
   Mutation,
   Action,
@@ -6,8 +7,8 @@ import {
   Module
 } from 'vuex-module-decorators'
 
-import store from '@/store/store'
 import { IPost } from '~/entities/interfaces'
+import PostRepository from '~/repositories/PostRepository'
 
 export interface IPostsState {
   posts: IPost[]
@@ -23,7 +24,10 @@ class Posts extends VuexModule implements IPostsState {
   }
 
   @Action({})
-  public fetchPosts() {}
+  public async fetch() {
+    const posts = await PostRepository.fetch()
+    this.SET_POSTS(posts)
+  }
 }
 
 export const storePosts = getModule(Posts)

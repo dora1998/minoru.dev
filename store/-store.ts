@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import { IPostsState } from '~/store/posts'
-import { IWorksState } from '~/store/works'
+import { IPostsState } from '@/store/-posts'
+import { IWorksState } from '@/store/-works'
 
 Vue.use(Vuex)
 

@@ -6,7 +6,7 @@
       <h1>スキル</h1>
       <SkillSet />
       <h1>最近の投稿</h1>
-      <RecentPosts />
+      <PostList />
     </div>
   </section>
 </template>
@@ -15,21 +15,14 @@
 import { Component, Vue } from 'vue-property-decorator'
 import Profile from '~/components/Profile.vue'
 import SkillSet from '~/components/SkillSet.vue'
-import RecentPosts from '~/components/RecentPosts.vue'
+import PostList from '~/components/PostList.vue'
 // import { MetaInfo } from 'vue-meta'
 
 @Component({
-  // head(): MetaInfo {
-  //   return {
-  //     titleTemplate: '',
-  //     title: 'サイト名'
-  //   }
-  // },
-
   components: {
     Profile,
     SkillSet,
-    RecentPosts
+    PostList
   }
 })
 export default class Index extends Vue {}

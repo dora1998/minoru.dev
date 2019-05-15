@@ -19,3 +19,10 @@
     overflow-wrap: break-word;
   }
 }
+
+@mixin card-layout {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}

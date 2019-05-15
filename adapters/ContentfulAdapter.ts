@@ -2,7 +2,7 @@ import { IWork } from '@/entities/interfaces'
 
 const contentful = require('contentful')
 
-class Contentful {
+class ContentfulAdapter {
   config = {
     space: process.env.CTF_SPACE_ID,
     accessToken: process.env.CTF_CDA_ACCESS_TOKEN
@@ -23,4 +23,4 @@ class Contentful {
   }
 }
 
-export default new Contentful()
+export default new ContentfulAdapter()

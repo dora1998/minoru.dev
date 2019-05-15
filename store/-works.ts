@@ -1,3 +1,4 @@
+import store from '@/store/-store'
 import {
   Mutation,
   Action,
@@ -6,15 +7,14 @@ import {
   Module
 } from 'vuex-module-decorators'
 
-import store from '@/store/store'
 import { IWork } from '~/entities/interfaces'
-import Contentful from '~/interfaces/Contentful'
+import WorkRepository from '@/repositories/WorkRepository'
 
 export interface IWorksState {
   works: IWork[]
 }
 
-@Module({ dynamic: true, store, name: 'posts', namespaced: true })
+@Module({ dynamic: true, store, name: 'works', namespaced: true })
 class Works extends VuexModule implements IWorksState {
   works: IWork[] = []
 
@@ -25,7 +25,7 @@ class Works extends VuexModule implements IWorksState {
 
   @Action({})
   public async fetch() {
-    const res = await Contentful.fetchWorks()
+    const res = await WorkRepository.fetch()
     this.SET_WORKS(res)
   }
 }
