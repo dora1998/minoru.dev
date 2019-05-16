@@ -42,3 +42,10 @@ export interface IWork {
   images: string[]
   order: number
 }
+
+export interface IActivity {
+  name: string
+  result?: string
+  start: string
+  end?: string
+}

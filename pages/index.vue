@@ -3,6 +3,8 @@
     <div>
       <h1>プロフィール</h1>
       <Profile />
+      <h1>活動履歴</h1>
+      <ActivityList />
       <!--
       <h1>スキル</h1>
       <SkillSet />
@@ -17,6 +19,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 import Profile from '~/components/Profile.vue'
 import SkillSet from '~/components/SkillSet.vue'
+import ActivityList from '~/components/ActivityList.vue'
 import PostList from '~/components/PostList.vue'
 import { MetaInfo } from 'vue-meta'
 
@@ -31,6 +34,7 @@ import { MetaInfo } from 'vue-meta'
   components: {
     Profile,
     SkillSet,
+    ActivityList,
     PostList
   }
 })
