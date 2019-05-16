@@ -1,5 +1,3 @@
-import { IWork } from '@/entities/interfaces'
-
 const contentful = require('contentful')
 
 class ContentfulAdapter {
@@ -13,13 +11,13 @@ class ContentfulAdapter {
     return contentful.createClient(this.config)
   }
 
-  async fetchWorks(): Promise<IWork[]> {
+  async fetchEntries(contentType: string, order?: string): Promise<any[]> {
     if (!this.client) this.client = this.createClient()
     const res = await this.client.getEntries({
-      content_type: process.env.CTF_WORK_TYPE_ID,
-      order: 'fields.order'
+      content_type: contentType,
+      order: order
     })
-    return res.items.map((item: any) => item.fields as IWork)
+    return res.items.map((item: any) => item.fields)
   }
 }
 
