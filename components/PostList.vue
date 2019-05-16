@@ -66,6 +66,10 @@ export default class RecentPosts extends Vue {
     @include mq(md) {
       grid-column: 2;
     }
+
+    > .link {
+      text-decoration: none;
+    }
   }
 }
 </style>

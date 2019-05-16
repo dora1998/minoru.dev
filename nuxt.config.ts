@@ -10,7 +10,7 @@ const nuxtConfig: NuxtConfiguration = {
    ** Headers of the page
    */
   head: {
-    title: "Minoru's Portfolio",
+    title: '',
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#',
       lang: 'ja'
