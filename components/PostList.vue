@@ -36,13 +36,13 @@ export default class RecentPosts extends Vue {
 .post {
   @include mq(md) {
     display: grid;
+    grid-gap: 0 16px;
     grid-template: 1fr / 180px 1fr;
   }
 
   @include card-layout;
 
   margin-bottom: 8px;
-  column-gap: 16px;
 
   > .ogp-image {
     @include mq(md) {
