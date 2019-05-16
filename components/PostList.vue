@@ -37,7 +37,7 @@ export default class RecentPosts extends Vue {
   @include mq(md) {
     display: grid;
     grid-gap: 0 16px;
-    grid-template: 1fr / 180px 1fr;
+    grid-template: 'image body' 1fr / 180px 1fr;
   }
 
   @include card-layout;
@@ -46,7 +46,7 @@ export default class RecentPosts extends Vue {
 
   > .ogp-image {
     @include mq(md) {
-      grid-column: 1;
+      grid-area: image;
       margin-bottom: 0;
     }
 
@@ -64,7 +64,7 @@ export default class RecentPosts extends Vue {
 
   > .post-detail {
     @include mq(md) {
-      grid-column: 2;
+      grid-area: body;
     }
 
     > .link {
