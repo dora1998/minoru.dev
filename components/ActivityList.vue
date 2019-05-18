@@ -32,6 +32,11 @@ export default class ActivityList extends Vue {
       end: '現在'
     },
     {
+      name: 'git challenge #11',
+      result: '優勝',
+      start: '2019/5'
+    },
+    {
       name: 'Web Frontend Challenge 2019',
       result: '優勝',
       start: '2019/3'
