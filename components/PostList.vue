@@ -2,7 +2,8 @@
   <section class="container">
     <div v-for="p in posts" :key="p.id" class="post">
       <div class="ogp-image">
-        <img :src="p.image" :alt="p.title" />
+        <img v-if="p.image" :src="p.image" :alt="p.title" />
+        <img v-else src="~/assets/imgs/ogp_noimage.png" />
       </div>
       <div class="post-detail">
         <a :href="p.url" class="link">
