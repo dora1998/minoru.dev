@@ -53,6 +53,7 @@ ul {
       width: 100px;
       height: 100%;
       padding: 8px;
+      border: 1px solid transparent;
       border-radius: 8px;
       color: #fff;
       text-align: center;
@@ -72,10 +73,6 @@ ul {
     &.active > a {
       background-color: #fff;
       color: $primary;
-
-      &:hover {
-        border: none;
-      }
     }
   }
 }
