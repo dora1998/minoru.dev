@@ -32,7 +32,7 @@ export default class AccountIcons extends Vue {
   accounts: IAccount[] = [
     {
       name: 'Twitter',
-      link: 'https://twitter.com/_dorayaki_',
+      link: 'https://twitter.com/d0ra1998',
       icon: ['fab', 'twitter'],
       color: '#1da1f2'
     },
