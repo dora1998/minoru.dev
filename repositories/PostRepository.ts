@@ -1,6 +1,9 @@
-import * as moment from 'moment'
+import dayjs from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
 import FeedAdapter from '@/adapters/FeedAdapter'
 import { IPost } from '@/entities/interfaces'
+
+dayjs.extend(customParseFormat)
 
 class PostRepository {
   async fetch() {
@@ -8,7 +11,7 @@ class PostRepository {
 
     const JSON_FORMAT = 'YYYY-MM-DDTHH:mm:ssZ'
     const DISPLAY_FORMAT = 'YYYY/MM/DD'
-    const posts = postsJson.map<IPost>(
+    return postsJson.map<IPost>(
       (item): IPost =>
         <IPost>{
           id: item.id,
@@ -16,12 +19,11 @@ class PostRepository {
           title: item.title,
           summary: item.summary,
           image: item.image,
-          datePublished: moment(item.date_published, JSON_FORMAT).format(
+          datePublished: dayjs(item.date_published, JSON_FORMAT).format(
             DISPLAY_FORMAT
           )
         }
     )
-    return posts
   }
 }
 export default new PostRepository()
