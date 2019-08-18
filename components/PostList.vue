@@ -3,7 +3,7 @@
     <div v-for="p in posts" :key="p.id" class="post">
       <div class="ogp-image">
         <img v-if="p.image" :src="p.image" :alt="p.title" />
-        <img v-else src="~/assets/imgs/ogp_noimage.png" />
+        <img v-else src="~/assets/imgs/ogp_noimage.png" :alt="p.title" />
       </div>
       <div class="post-detail">
         <a :href="p.url" class="link">
