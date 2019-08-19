@@ -8,7 +8,7 @@
       </div>
       <div class="body">
         <span v-text="a.name" />
-        <span v-if="a.result" v-text="a.result" class="result" />
+        <span v-if="a.result" class="result" v-text="a.result" />
       </div>
     </div>
   </div>
@@ -30,6 +30,10 @@ export default class ActivityList extends Vue {
       name: 'Unimap 開発スタッフ',
       start: '2018/8',
       end: '現在'
+    },
+    {
+      name: 'Wantedly インターン(Web Frontend)',
+      start: '2019/8'
     },
     {
       name: 'git challenge #11',
