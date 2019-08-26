@@ -32,7 +32,11 @@ export default class ActivityList extends Vue {
       end: '現在'
     },
     {
-      name: 'Wantedly インターン(Web Frontend)',
+      name: 'DeNA 2019 SUMMER INTERNSHIP(プロダクト開発コース)',
+      start: '2019/8'
+    },
+    {
+      name: 'Wantedly サマーインターン(Web Frontend)',
       start: '2019/8'
     },
     {
