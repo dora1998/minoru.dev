@@ -32,6 +32,10 @@ export default class ActivityList extends Vue {
       end: '現在'
     },
     {
+      name: 'AbemaTV Web インターン',
+      start: '2019/9'
+    },
+    {
       name: 'DeNA 2019 SUMMER INTERNSHIP(プロダクト開発コース)',
       start: '2019/8'
     },
