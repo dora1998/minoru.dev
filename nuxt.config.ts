@@ -1,10 +1,11 @@
-import NuxtConfiguration from '@nuxt/config'
+import { Configuration } from '@nuxt/types'
 const StylelintPlugin = require('stylelint-webpack-plugin')
 require('dotenv').config()
 // const pkg = require('./package')
 
-const nuxtConfig: NuxtConfiguration = {
+const nuxtConfig: Configuration = {
   mode: 'spa',
+  buildModules: ['@nuxt/typescript-build'],
 
   /*
    ** Headers of the page

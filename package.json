@@ -5,10 +5,10 @@
   "author": "dora1998",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
@@ -18,7 +18,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/vue-fontawesome": "^0.1.6",
-    "@nuxt/typescript": "^2.8.1",
+    "@nuxt/typescript-runtime": "^0.2.1",
     "@nuxtjs/axios": "^5.5.4",
     "@nuxtjs/dotenv": "^1.3.0",
     "@nuxtjs/markdownit": "^1.2.6",
@@ -33,6 +33,7 @@
     "vue-property-decorator": "^8.2.1"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^0.3.1",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@types/eslint": "^4.16.6",
     "@types/eslint-plugin-prettier": "2.2.0",
