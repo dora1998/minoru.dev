@@ -7,28 +7,28 @@
       </div>
       <div class="post-detail">
         <a :href="p.url" class="link">
-          <h3 v-text="p.title" />
+          <h3 v-text="p.title"></h3>
         </a>
-        <span class="published" v-text="p.datePublished" />
+        <span class="published" v-text="p.datePublished"></span>
       </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component } from 'vue-property-decorator'
 
 import { IPost } from '~/entities/interfaces'
-import { storePosts } from '~/store/-posts'
+import { VStoreComponent } from '@/utils/vuex-simple'
 
 @Component({})
-export default class RecentPosts extends Vue {
+export default class RecentPosts extends VStoreComponent {
   public mounted() {
-    storePosts.fetch()
+    this.store.posts.fetch()
   }
 
   get posts(): IPost[] {
-    return storePosts.posts
+    return this.store.posts.posts
   }
 }
 </script>

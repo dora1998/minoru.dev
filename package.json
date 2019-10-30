@@ -30,7 +30,8 @@
     "nuxt": "^2.8.1",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
-    "vue-property-decorator": "^8.2.1"
+    "vue-property-decorator": "^8.2.1",
+    "vuex-simple": "^2.2.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.3.1",
@@ -69,8 +70,7 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.9.1",
     "stylelint-webpack-plugin": "^0.10.5",
-    "typesync": "^0.5.1",
-    "vuex-module-decorators": "^0.9.9"
+    "typesync": "^0.5.1"
   },
   "browserslist": [
     "last 2 version",

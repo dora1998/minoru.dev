@@ -37,18 +37,18 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component } from 'vue-property-decorator'
 import { IWork } from '~/entities/interfaces'
-import { storeWorks } from '~/store/-works'
+import { VStoreComponent } from '@/utils/vuex-simple'
 
 @Component({})
-export default class WorkList extends Vue {
+export default class WorkList extends VStoreComponent {
   public mounted() {
-    storeWorks.fetch()
+    this.store.works.fetch()
   }
 
   get works(): IWork[] {
-    return storeWorks.works
+    return this.store.works.works
   }
 }
 </script>

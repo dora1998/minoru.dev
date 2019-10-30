@@ -11327,10 +11327,10 @@ vue@^2.6.10:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
-vuex-module-decorators@^0.9.9:
-  version "0.9.11"
-  resolved "https://registry.yarnpkg.com/vuex-module-decorators/-/vuex-module-decorators-0.9.11.tgz#a1f27d0b4187ce96d99bb877fa09dfaddd067076"
-  integrity sha512-mqOqeQkWrVpdDE31loeLBj8ciHEpgtyRu8MzzxSpncjhVmggSmY4xdnwfxdXMfeDrcux6vHVWoJuzepgBhKkSA==
+vuex-simple@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/vuex-simple/-/vuex-simple-2.2.0.tgz#8c0ad521942462c370848172269cd5ac72880fc3"
+  integrity sha512-4CI1merNNNZnmiK754dGFTgqjY/ToQ4tzIIG2I9f2CaueEr4aFfrbWOn7Dx2vOwr8OtEnyU3zscbE0yg2RrZjA==
 
 vuex@^3.1.1:
   version "3.1.1"
