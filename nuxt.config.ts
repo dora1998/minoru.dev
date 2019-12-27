@@ -104,7 +104,7 @@ const nuxtConfig: Configuration = {
     postcss: {
       preset: {
         autoprefixer: {
-          grid: true
+          grid: 'autoplace'
         }
       }
     }

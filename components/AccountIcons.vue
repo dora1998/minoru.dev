@@ -18,7 +18,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 import { IAccount } from '~/entities/interfaces'
-import IconButton from '~/basics/IconButton.vue'
+import IconButton from '@/components/IconButton.vue'
 import MediaQuery, { QUERY } from '~/utils/MediaQuery'
 
 @Component({

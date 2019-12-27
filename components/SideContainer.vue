@@ -8,9 +8,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import MyName from '~/components/MyName.vue'
-import SiteMenu from '~/components/SiteMenu.vue'
-import AccountIcons from '~/components/AccountIcons.vue'
+import MyName from '@/components/MyName.vue'
+import SiteMenu from '@/components/SiteMenu.vue'
+import AccountIcons from '@/components/AccountIcons.vue'
 
 @Component({
   components: {

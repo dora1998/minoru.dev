@@ -8,7 +8,7 @@ class WorkRepository {
       process.env.CTF_WORK_TYPE_ID,
       'fields.order'
     )
-    return res == undefined ? [] : (res as IWork[])
+    return res ? (res as IWork[]) : []
   }
 }
 
