@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import SideContainer from '~/containers/SideContainer.vue'
+import SideContainer from '@/components/SideContainer.vue'
 
 @Component({
   components: {
