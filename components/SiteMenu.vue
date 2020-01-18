@@ -24,6 +24,10 @@ export default class SiteMenu extends Vue {
     {
       text: 'Works',
       name: 'works'
+    },
+    {
+      text: 'Skills',
+      name: 'skills'
     }
   ]
 

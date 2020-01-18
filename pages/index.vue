@@ -5,10 +5,6 @@
       <Profile />
       <h1>活動履歴</h1>
       <ActivityList />
-      <!--
-      <h1>スキル</h1>
-      <SkillSet />
-      -->
       <h1>最近の投稿</h1>
       <PostList />
     </div>
