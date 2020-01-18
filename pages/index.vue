@@ -1,14 +1,18 @@
 <template>
-  <section class="container">
-    <div>
-      <h1>プロフィール</h1>
+  <main class="container">
+    <section>
+      <h1 class="title">プロフィール</h1>
       <Profile />
-      <h1>活動履歴</h1>
+    </section>
+    <section>
+      <h1 class="title">活動履歴</h1>
       <ActivityList />
-      <h1>最近の投稿</h1>
+    </section>
+    <section>
+      <h1 class="title">最近の投稿</h1>
       <PostList />
-    </div>
-  </section>
+    </section>
+  </main>
 </template>
 
 <script lang="ts">
@@ -38,8 +42,5 @@ export default class Index extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  margin-bottom: 8px;
-  border-bottom: 1px solid #ccc;
-}
+@include page-styles;
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <section>
-    <h1>スキル</h1>
+  <main>
+    <h1 class="title">スキル</h1>
     <SkillSet />
-  </section>
+  </main>
 </template>
 
 <script lang="ts">
@@ -24,4 +24,6 @@ import SkillSet from '~/components/SkillSet.vue'
 export default class Skills extends Vue {}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@include page-styles;
+</style>

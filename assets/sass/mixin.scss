@@ -26,3 +26,14 @@
   border-radius: 4px;
   box-shadow: 0 2px rgba(0, 0, 0, 0.2);
 }
+
+@mixin page-styles {
+  .title {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  section {
+    margin-bottom: 16px;
+  }
+}
