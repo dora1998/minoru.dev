@@ -1,10 +1,5 @@
 <template>
   <div class="container">
-    <img
-      class="prof_illust"
-      alt="プロフィールイラスト"
-      src="~/assets/imgs/prof_illust.jpeg"
-    />
     <div class="attrs">
       <div v-for="attr in attrs" :key="attr.name" class="attribution">
         <div v-if="attr.icon" class="icon">
@@ -63,23 +58,9 @@ export default class Profile extends Vue {
 
 <style lang="scss" scoped>
 .container {
-  display: flex;
-  align-items: flex-start;
   padding: 8px;
 
-  > .prof_illust {
-    display: none;
-
-    @include mq(md) {
-      display: block;
-      width: 100px;
-      margin-right: 16px;
-    }
-  }
-
   > .attrs {
-    flex-grow: 1;
-
     > .attribution {
       @include attribution;
     }
