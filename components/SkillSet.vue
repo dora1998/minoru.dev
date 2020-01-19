@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <img v-for="s in skills" :key="s.name" :src="s.img" :alt="s.name" />
+    <a v-for="s in skills" :key="s.name" :href="s.link || '#'">
+      <img :src="s.img" :alt="s.name" />
+    </a>
   </div>
 </template>
 
@@ -10,6 +12,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 export interface Skill {
   name: string
   img: string
+  link?: string
 }
 @Component({})
 export default class SkillSet extends Vue {
