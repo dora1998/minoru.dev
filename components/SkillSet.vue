@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    <a v-for="s in skills" :key="s.name" :href="s.link || '#'">
+    <a
+      v-for="s in skills"
+      :key="s.name"
+      :href="s.link || '#'"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img :src="s.img" :alt="s.name" />
     </a>
   </div>
