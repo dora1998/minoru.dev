@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <div class="introduction">
+      <p>
+        最近は、Web開発を中心に勉強しており、Webフロントエンドが主な得意分野です。
+      </p>
+    </div>
     <div class="attrs">
       <div v-for="attr in attrs" :key="attr.name" class="attribution">
         <div v-if="attr.icon" class="icon">
@@ -39,6 +44,14 @@ export default class Profile extends Vue {
       text: '1998/05/22'
     },
     {
+      name: '好きな言語',
+      text: 'TypeScript, Julia'
+    },
+    {
+      name: '趣味',
+      text: 'カメラ, ガジェット収集, 電子決済/送金, ピアノ'
+    },
+    {
       name: 'Qiita',
       text: 'dora1998',
       link: 'https://qiita.com/dora1998'
@@ -59,6 +72,10 @@ export default class Profile extends Vue {
 <style lang="scss" scoped>
 .container {
   padding: 8px;
+
+  > .introduction {
+    margin-bottom: 16px;
+  }
 
   > .attrs {
     > .attribution {
