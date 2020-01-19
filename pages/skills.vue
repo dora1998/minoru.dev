@@ -196,5 +196,9 @@ export default class Skills extends Vue {
 
 .licenses {
   margin-top: 32px;
+
+  @include mq(md) {
+    margin-top: 64px;
+  }
 }
 </style>
