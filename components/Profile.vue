@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <img
-      class="prof_illust"
-      alt="プロフィールイラスト"
-      src="~/assets/imgs/prof_illust.jpeg"
-    />
+    <div class="introduction">
+      <p>
+        最近は、Web開発を中心に勉強しており、Webフロントエンドが主な得意分野です。
+      </p>
+    </div>
     <div class="attrs">
       <div v-for="attr in attrs" :key="attr.name" class="attribution">
         <div v-if="attr.icon" class="icon">
@@ -44,6 +44,14 @@ export default class Profile extends Vue {
       text: '1998/05/22'
     },
     {
+      name: '好きな言語',
+      text: 'TypeScript, Julia'
+    },
+    {
+      name: '趣味',
+      text: 'カメラ, ガジェット収集, 電子決済/送金, ピアノ'
+    },
+    {
       name: 'Qiita',
       text: 'dora1998',
       link: 'https://qiita.com/dora1998'
@@ -63,23 +71,13 @@ export default class Profile extends Vue {
 
 <style lang="scss" scoped>
 .container {
-  display: flex;
-  align-items: flex-start;
   padding: 8px;
 
-  > .prof_illust {
-    display: none;
-
-    @include mq(md) {
-      display: block;
-      width: 100px;
-      margin-right: 16px;
-    }
+  > .introduction {
+    margin-bottom: 16px;
   }
 
   > .attrs {
-    flex-grow: 1;
-
     > .attribution {
       @include attribution;
     }

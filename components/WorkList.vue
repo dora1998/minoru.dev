@@ -31,6 +31,7 @@
         </div>
       </div>
 
+      <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-html="$md.render(work.body)" />
     </div>
   </div>
