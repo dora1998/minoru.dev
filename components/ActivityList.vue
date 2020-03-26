@@ -32,6 +32,15 @@ export default class ActivityList extends Vue {
       end: '現在'
     },
     {
+      name: 'リクルートスピードハッカソン',
+      result: '優勝',
+      start: '2020/3'
+    },
+    {
+      name: 'pixiv インターン',
+      start: '2020/2'
+    },
+    {
       name: 'AbemaTV Web インターン',
       start: '2019/9'
     },
