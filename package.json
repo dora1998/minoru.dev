@@ -34,7 +34,7 @@
     "vuex-simple": "^2.2.0"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.5.3",
+    "@nuxt/typescript-build": "^0.6.0",
     "@nuxtjs/eslint-config-typescript": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.2.2",
     "@types/eslint": "^4.16.6",
@@ -73,8 +73,8 @@
     "typesync": "^0.5.1"
   },
   "browserslist": [
-    "last 2 version",
-    "android >= 4.4",
-    "IE 11"
+    ">0.25%",
+    "not ie 11",
+    "not op_mini all"
   ]
 }
