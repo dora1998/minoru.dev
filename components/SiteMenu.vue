@@ -31,8 +31,8 @@ export default class SiteMenu extends Vue {
     }
   ]
 
-  get currentItem(): string | undefined {
-    return this.$route.name
+  get currentItem(): string | null {
+    return this.$route.name ?? null
   }
 }
 </script>

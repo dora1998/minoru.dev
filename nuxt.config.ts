@@ -1,11 +1,10 @@
 import { Configuration } from '@nuxt/types'
-const StylelintPlugin = require('stylelint-webpack-plugin')
 require('dotenv').config()
 // const pkg = require('./package')
 
 const nuxtConfig: Configuration = {
   mode: 'spa',
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/stylelint-module'],
 
   /*
    ** Headers of the page
@@ -63,7 +62,7 @@ const nuxtConfig: Configuration = {
   /*
    ** Plugins to load before   mounting the App
    */
-  plugins: ['~/plugins/fontawesome.ts'],
+  plugins: ['~/plugins/fontawesome'],
 
   /*
    ** Nuxt.js modules
@@ -85,29 +84,6 @@ const nuxtConfig: Configuration = {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        if (!config.module) return
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-
-        if (!config.plugins) return
-        config.plugins.push(
-          new StylelintPlugin({
-            files: ['**/*.vue', '**/*.scss']
-          })
-        )
-      }
-    },
-
     postcss: {
       preset: {
         autoprefixer: {
@@ -135,6 +111,10 @@ const nuxtConfig: Configuration = {
     linkify: true, // URLに似たテキストをリンクに自動変換する
     typography: true, // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
     use: []
+  },
+
+  stylelint: {
+    fix: true
   }
 }
 

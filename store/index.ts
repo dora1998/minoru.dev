@@ -19,8 +19,8 @@
 // SOFTWARE.
 
 import { createVuexStore, Module } from 'vuex-simple'
-import { PostsModule } from '@/store/posts'
-import { WorksModule } from '@/store/works'
+import { PostsModule } from '@/store/modules/posts'
+import { WorksModule } from '@/store/modules/works'
 
 export class VStore {
   @Module() posts = new PostsModule()
