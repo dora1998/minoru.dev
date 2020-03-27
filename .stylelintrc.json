@@ -3,7 +3,7 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-property-sort-order-smacss",
-    "./node_modules/prettier-stylelint/config.js"
+    "stylelint-prettier/recommended"
   ],
   "rules": {
     "indentation": 2,
