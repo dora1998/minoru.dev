@@ -39,14 +39,7 @@ const nuxtConfig: Configuration = {
       }
       // { hid: 'og:image', property: 'og:image', content: 'https://example.com/img/ogp/common.jpg' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [
-      {
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        'data-ad-client': 'ca-pub-1234567890123456',
-        async: true
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   /*
