@@ -9992,10 +9992,10 @@ stylelint-config-prettier@^8.0.1:
   resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-8.0.1.tgz#ec7cdd7faabaff52ebfa56c28fed3d995ebb8cab"
   integrity sha512-RcjNW7MUaNVqONhJH4+rtlAE3ow/9SsAM0YWV0Lgu3dbTKdWTa/pQXRdFWgoHWpzUKn+9oBKR5x8JdH+20wmgw==
 
-stylelint-config-property-sort-order-smacss@^5.0.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-property-sort-order-smacss/-/stylelint-config-property-sort-order-smacss-5.3.0.tgz#3466a4314acda90419de3002a9b9c894eb26ce14"
-  integrity sha512-BRi2wiE/Ed4p7kGV2fqQPUoqpWAn+uC+9AuTodcvycFAS39czAAsEwOAZvWs0Wk10qofRPaC7FhGe2TUsn/Iyg==
+stylelint-config-property-sort-order-smacss@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-property-sort-order-smacss/-/stylelint-config-property-sort-order-smacss-6.0.0.tgz#74c00d872703177724d1a2181bc8e06106dd335d"
+  integrity sha512-34hBYSJXCVobPeEx84IXfGJxE9ZHZ5o87d4OPLQVqX80M20TnS+NFcOvPpIok6j1ZM7GSC3QikSNgyMtgZrDoQ==
   dependencies:
     css-property-sort-order-smacss "^2.1.3"
     stylelint-order "^4.0.0"
