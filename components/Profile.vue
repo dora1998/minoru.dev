@@ -36,7 +36,7 @@ export default class Profile extends Vue {
     {
       name: 'University',
       icon: 'school',
-      text: '京都大学 工学部電気電子工学科 B3'
+      text: '京都大学 工学部電気電子工学科 B4'
     },
     {
       name: 'Birthday',
